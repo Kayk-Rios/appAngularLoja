@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PRODUCTS } from '../../products';
 import { CommonModule } from '@angular/common';
+import {CartService} from '../../service/cart.service'
 
 @Component({
   selector: 'app-card',
@@ -14,6 +15,9 @@ export class CardComponent {
   filteredProducts = PRODUCTS;
   categories = [...new Set(PRODUCTS.map(product => product.category))];
   accordionStates: boolean[] = Array(this.products.length).fill(false);
+  
+
+  constructor(private cartService: CartService ){}
 
   filterByCategory(category: string): void {
     if (category === 'Todos') {
@@ -27,6 +31,9 @@ export class CardComponent {
   }
   toggleAccordion(index: number): void {
     this.accordionStates[index] = !this.accordionStates[index];
+  }
+  addToCart(product: any): void {
+    this.cartService.addToCart(product);
   }
 
 }

@@ -14,9 +14,11 @@
     <div *ngFor="let product of filteredProducts; let i = index" class="product-card">
       <h3>{{ product.title }}</h3>
       
+      
       <div class="images">
         <img *ngFor="let image of product?.images" [src]="image" [alt]="product?.title" />
       </div>
+      <h3>R$ {{ product.price}}</h3>
       
       <h4 (click)="toggleAccordion(i)">
         {{ accordionStates[i] ? 'Esconder Descrição <' : 'Mostrar Descrição >' }}
@@ -24,10 +26,7 @@
       <div *ngIf="accordionStates[i]" class="accordion-content descricao">
         <p>{{ product?.description }}</p>
       </div>
-
-      <a [href]="'https://wa.me/5581981699096?text=Estou%20interessado%20em%20comprar%20o%20produto%20' + product.title" target="_blank">
-        <button>Comprar</button>
-      </a>
+        <button (click)="addToCart(product)">Comprar</button>
     </div>
   </div>
 </div>
