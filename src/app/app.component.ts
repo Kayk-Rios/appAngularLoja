@@ -4,10 +4,11 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardComponent } from './components/card/card.component';
 import { CarroselComponent } from './components/carrosel/carrosel.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MenuComponent, FooterComponent, CardComponent, CarroselComponent],
+  imports: [RouterOutlet, MenuComponent, FooterComponent, CardComponent, CarroselComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   encapsulation: ViewEncapsulation.None, 
