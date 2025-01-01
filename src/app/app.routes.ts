@@ -1,25 +1,19 @@
 import { Routes } from '@angular/router';
+import { CartComponent } from './components/cart/cart.component';
+import { CardComponent } from './components/card/card.component';
 
 export const routes: Routes = [
-      // {
-    //     path:'',
-    //     component: HomeComponent
-    // }
-    // ,{
-    //     path:'contato',
-    //     component: ContatoComponent
+      {
+        path:'',
+        component: CardComponent
+    }
+    ,{
+        path:'cart',
+        component: CartComponent
 
-    // },
+    },
     // {
-    //     path:'sobre',
+    //     path:'contato',
     //     component: SobreComponent
-    // },
-    // {
-    //     path:'blusas',
-    //     component: BlusasComponent
-    // },
-    // {
-    //     path:'calcas',
-    //     component: CalcasComponent
     // }
 ];
