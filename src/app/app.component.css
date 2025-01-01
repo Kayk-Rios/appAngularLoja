@@ -3,10 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 .main {
     background: rgb(198, 168, 34);
     height: 100vh;
+}
+body{
+    background: rgb(198, 168, 34);
 }
 
 
