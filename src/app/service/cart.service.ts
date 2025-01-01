@@ -7,7 +7,9 @@ export class CartService {
   private cart: any[] = [];
 
   constructor() {
-    this.loadCartFromStorage(); // Carrega o carrinho armazenado ao inicializar
+      if (typeof window !== 'undefined') {
+      this.loadCartFromStorage(); // Carrega o carrinho armazenado ao inicializar (somente no navegador)
+    }
   }
 
   getCart() {
