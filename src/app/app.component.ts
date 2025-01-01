@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardComponent } from './components/card/card.component';
+import { CarroselComponent } from './components/carrosel/carrosel.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MenuComponent, FooterComponent, CardComponent],
+  imports: [RouterOutlet, MenuComponent, FooterComponent, CardComponent, CarroselComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   encapsulation: ViewEncapsulation.None, 
