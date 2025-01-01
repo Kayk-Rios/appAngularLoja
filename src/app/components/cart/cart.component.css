@@ -1,0 +1,79 @@
+
+  .cart {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para cada produto */
+  .product {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product p {
+    font-size: 16px;
+  }
+  
+  /* Estilos para o botão de remover */
+  .product .btnRemover {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    transition: background-color 0.3s;
+  }
+  
+  .product button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Estilo para a seção do total */
+  .total {
+    display: flex;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 44%;
+    width: 200px;
+  }
+
+  /* Botão de compra */
+  div .btn {
+    display: flex;
+    width: 200px;
+    padding: 12px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 44%;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  @media (max-width: 768px){
+    .total{
+        margin-left: 24%;
+    }
+    div .btn {
+        margin-left: 24%;
+    }
+  }

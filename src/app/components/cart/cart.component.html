@@ -1,0 +1,17 @@
+<!-- cart.component.html -->
+<div *ngFor="let product of cartService.getCart(); let i = index" class="cart">
+  <div class="product">
+    <p>{{ product.title }}</p>
+    <p>{{ product.price | currency }}</p>
+    <button (click)="removeProduct(i)" class="btnRemover">Remover</button>
+  </div>
+</div>
+
+<div>
+  <div class="total">
+    <p>Total: {{ totalPrice() | currency }}</p>
+  </div>
+  
+  
+  <button (click)="buy()" class="btn">Comprar via WhatsApp</button>
+</div>
