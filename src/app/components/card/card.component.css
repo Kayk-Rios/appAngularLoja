@@ -1,0 +1,116 @@
+/* Estilo Geral */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  margin: 50px 0;
+  font-size: 2rem;
+}
+
+select {
+  background: rgb(159, 141, 60);
+  color: #fff;
+  font-size: 16px;
+  margin: 25px 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Grade de Produtos */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Cartões de Produto */
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagens */
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.images img {
+  width: 180px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão */
+button {
+  background-color: rgb(159, 141, 60);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(120, 100, 40);
+}
+
+.descricao{
+  background-color: rgb(225, 221, 221);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 568px) {
+  .product-grid {
+    grid-template-columns:1fr;
+  }
+
+  .images img {
+    width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  select {
+    font-size: 14px;
+  }
+
+  .images img {
+    width: 130px;
+  }
+}
