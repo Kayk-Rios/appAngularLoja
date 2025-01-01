@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MenuComponent, FooterComponent, CardComponent, CarroselComponent, CommonModule],
+  imports: [RouterOutlet, MenuComponent, FooterComponent, CarroselComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   encapsulation: ViewEncapsulation.None, 
