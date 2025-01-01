@@ -10,7 +10,7 @@
   
   .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background: rgb(159, 141, 60);
     padding: 15px 30px;
@@ -61,7 +61,7 @@
       flex-direction: column;
       width: 100%;
       text-align: center;
-      background-color: #333;
+      background: rgb(159, 141, 60);
       position: absolute;
       top: 70px;
       left: 0;
@@ -78,6 +78,9 @@
   
     .nav-links.active {
       display: flex;
+    }
+    .navbar{
+      justify-content: space-between;
     }
   }
   
