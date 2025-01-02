@@ -1,17 +1,28 @@
+<nav class="flex items-center justify-between p-4 bg-yellow-600 menu">
 
-<nav class="navbar">
-    <div class="logo">
-      <a href="#">Gal Store</a>
-    </div>
-    <ul class="nav-links" [ngClass]="{ 'active': isMenuActive }">
-      <li><a href="/">Home</a></li>
-      <li><a href="/cart"><img src="../../../assets/cart.svg" alt="carrinhoCompras"></a></li>
-      <li><a href="/contato">Contato</a></li>
-    </ul>
-    <div class="hamburger" (click)="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-  
+  <div class="text-white text-xl font-bold">
+    <a href="/">Gal Store</a>
+  </div>
+
+  <!-- Link do Carrinho - Sempre visível, fora do menu hambúrguer -->
+  <ul class="hidden md:flex space-x-6 text-white">
+    <li><a href="/" class="hover:underline">Home</a></li>
+    <li><a href="/contato" class="hover:underline">Contato</a></li>
+  </ul>
+  <a href="/cart" class="md:block cart text-white hover:underline">
+    <img src="../../../assets/cart.svg" alt="carrinhoCompras" class="w-6">
+  </a>
+
+  <!-- Menu Hambúrguer (apenas para telas pequenas) -->
+  <button class="md:hidden flex flex-col space-y-1" (click)="toggleMenu()">
+    <span class="block w-6 h-1 bg-white"></span>
+    <span class="block w-6 h-1 bg-white"></span>
+    <span class="block w-6 h-1 bg-white"></span>
+  </button>
+</nav>
+
+<!-- Menu Responsivo -->
+<ul [ngClass]="{ 'hidden': !isMenuActive, 'flex': isMenuActive }" class="flex flex-col items-center space-y-4 text-white md:hidden menu p-[20px]">
+  <li><a href="/" class="hover:underline">Home</a></li>
+  <li><a href="/contato" class="hover:underline">Contato</a></li>
+</ul>
